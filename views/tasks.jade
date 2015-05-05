@@ -1,0 +1,64 @@
+doctype html(lang='en')
+head
+    meta(charset='utf-8')
+    |     
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    |     
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    |     
+    meta(name='description', content='')
+    |     
+    meta(name='author', content='')
+    |     
+    title Fluxx Capacitor
+    // Bootstrap Core CSS
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+
+    // Custom CSS
+    link(href='stylesheets/task.css', rel='stylesheet')
+  body
+    // Navigation
+    nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+      .container
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Navigate
+            |                     
+            span.icon-bar
+            |                     
+            span.icon-bar
+            |                     
+            span.icon-bar
+          |                 
+          a.navbar-brand(href='#') Fluxx
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li
+              a(href='index.html') Dashboard
+        // /.navbar-collapse
+      // /.container
+    |    
+    main
+      section#task-form
+        input#create-task(type='text', name='task-insert', placeholder='Insert your list items here')
+        |     
+        button#create-task Add Mission
+      |   
+      section#task-container
+        ul#task-list
+          h3.nothing-message No list yet
+          |       
+          h3.task-headline Today&apos;s Tasks
+        |     
+        #controls
+          p **Single Click to mark complete
+          |       
+          p **Double Click to remove from list
+          |       
+          br
+          |       
+          button#clear-all-tasks Clear All Tasks
+    script(src='javascripts/tasks.js')
+
