@@ -26,6 +26,23 @@ $(document).ready(function(){
 		$('.task-headline').fadeIn();
 	});
 
+	$('button#curl_btn').on('click', function() {
+		$.ajax({ 
+			type: "GET",
+			dataType: "json",
+			url: "https://api.spark.io/v1/devices/51ff6a06582554959350487/brew",
+			data: {
+				access_token: "21a4821d65b99ebe4c72f6c1fbebd966b4dc4128"
+			},
+			success: function(data){        
+				alert(data);
+			}, 
+			error: function(data) {
+				alert(JSON.stringify(data))
+			}
+		});
+	})
+
 	// mark as complete
 	$(document).on('click','li',function(){
 		$(this).toggleClass('complete');
