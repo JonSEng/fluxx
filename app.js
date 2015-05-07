@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var fluxx = require('./routes/fluxx');
+var users = require('./routes/users');
 
 var mongo = require("mongoskin");
 var db = mongo.db("mongodb://localhost:27017/nodetest2", {native_parser:true});
@@ -30,6 +31,7 @@ app.use(function(req, res, next){
 })
 
 app.use('/', fluxx);
+app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
