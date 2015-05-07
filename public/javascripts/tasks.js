@@ -30,8 +30,9 @@ $(document).ready(function(){
 		$.ajax({ 
 			type: "POST",
 			dataType: "json",
-			url: "https://api.spark.io/v1/devices/51ff6a065082554959350487/brew",
+			url: "https://api.spark.io/v1/devices/51ff6a065082554959350487/power_up",
 			data: {
+				args: "1",
 				access_token: "21a4821d65b99ebe4c72f6c1fbebd966b4dc4128"
 			},
 			success: function(data){        

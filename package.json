@@ -14,6 +14,7 @@
     "debug": "~2.1.1",
     "jade": "*",
     "mongodb": "~1.4",
-    "mongoskin": "*"
+    "mongoskin": "*",
+    "d3": "*"
   }
 }
